@@ -1,0 +1,21 @@
+<div class="col-md-12">
+	<div class="card card-container">
+		<img id="profile-img" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" class="profile-img-card" />
+		<form *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+			<div class="form-group">
+				<label for="code">Enter the 6-digit code from your authenticator app</label> <input type="text" class="form-control" name="code" [(ngModel)]="form.code" required minlength="6" #code="ngModel" />
+				<div class="alert alert-danger" role="alert" *ngIf="f.submitted && code.invalid">
+					<div *ngIf="code.errors.required">Code is required</div>
+					<div *ngIf="code.errors.minlength">Code must be at least 6 characters</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<button class="btn btn-primary btn-block">Login</button>
+			</div>
+			<div class="form-group">
+				<div class="alert alert-danger" role="alert" *ngIf="isLoginFailed">Login failed: {{ errorMessage }}</div>
+			</div>
+		</form>
+		<div class="alert alert-success" *ngIf="isLoggedIn">Welcome {{currentUser.displayName}} <br>Logged in as {{ currentUser.roles }}.</div>
+	</div>
+</div>
