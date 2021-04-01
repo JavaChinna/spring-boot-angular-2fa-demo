@@ -27,8 +27,6 @@ services:
     build:
       context: angular-11-social-login # Use an image built from the specified dockerfile in the `angular-11-social-login` directory.
       dockerfile: Dockerfile
-      args:
-        API_BASE_URL: http://127.0.0.1:8080/
     ports:
       - "8081:80" # Map the exposed port 80 on the container to port 8081 on the host machine
     restart: always
