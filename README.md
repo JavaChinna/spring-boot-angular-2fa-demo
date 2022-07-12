@@ -1,6 +1,6 @@
 # Spring Boot 2 + Angular 10: User Registration and Login using JWT Authentication, OAuth2 Social Login with Facebook, Google, LinkedIn, and Github using Spring Security 5 and Two Factor Authentication (2FA)
 
-[Creating Backend - Spring REST API - Part 1](https://www.javachinna.com/spring-boot-angular-two-factor-authentication/)
+[Creating Backend - Spring REST API - Part 1](https://www.javachinna.com/spring-boot-angular-10-user-registration-oauth2-social-login-part-1/)
 
 [Creating Backend - Spring REST API - Part 2](https://www.javachinna.com/2020/10/23/spring-boot-angular-10-user-registration-oauth2-social-login-part-2/)
 
